@@ -1,11 +1,9 @@
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-
 import javax.swing.*;
 
 public class FormLab12_1 extends JFrame{
-
     Container cp ;
     JLabel name , id ;
     JTextField t1 ,t2 ;
@@ -26,8 +24,6 @@ public class FormLab12_1 extends JFrame{
         t2 = new JTextField(20);
         b1 = new JButton("Add");
         b2 = new JButton("Clear");  
-
-
         t1.addKeyListener(new tmp(){
             public void keyTyped(KeyEvent e) {
                   if (!Character.isDigit(e.getKeyChar())){
@@ -42,8 +38,6 @@ public class FormLab12_1 extends JFrame{
                     }    
             }
         });
-
-
         id.setBounds(32, 10, 60, 25);
         name.setBounds(10, 40, 60, 25);
         t1.setBounds(60, 10, 120, 25);
@@ -61,15 +55,9 @@ public class FormLab12_1 extends JFrame{
         this.setLocationRelativeTo(null);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
-   
 }
 class tmp implements KeyListener{
     public void keyTyped(KeyEvent e) {  }
-
-
     public void keyPressed(KeyEvent e) { }
-
-   
-    public void keyReleased(KeyEvent e) {  }
-    
+    public void keyReleased(KeyEvent e) {  }  
 }
